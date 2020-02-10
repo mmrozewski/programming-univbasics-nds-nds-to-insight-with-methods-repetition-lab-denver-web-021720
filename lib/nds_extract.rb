@@ -62,5 +62,26 @@ end
 
 def gross_per_studio(collection)
   
+  index = 0
+  
+  gross_totals = {}
+
+  while index < collection.length do
+    if !(gross_totals.has_key? 'collection[index][:studio]' )
+      gross_totals[collection[index][:studio]] = 0
+    end
+    index += 1
+  end
+  index = 0
+
+  while index < collection.length do
+    
+    gross_totals[collection[index][:studio]] += collection[index][:worldwide_gross]
+    index += 1
+  end
+  
+  gross_totals
+  
+end
 
 
