@@ -60,6 +60,7 @@ def total_gross(source)
   
 end
 
-
+def gross_per_studio(collection)
+  
 
 
